@@ -1,12 +1,9 @@
 programa
 {
 	
-   	real saldo = 150.00// Float
-   	cadeia nome
-
-
 	funcao inicio() {
-
+		real saldo = 150.00// Float
+   		cadeia nome
 		inteiro opcao 
 		inteiro numero
 		real deposito
@@ -50,10 +47,11 @@ programa
 				escreva("Qual o valor para saque? ")
 				leia(saque)
 	
-				se (saque <= 0){					
+				se (saque <= 0 ou saque > saldo){
+					escreva("Operação não autorizada.\n")					
 					escreva("Por favor, informe um número válido.\n")
 				}
-				}enquanto (saque <= 0) // Repete até que o segundo valor seja maior que zero
+				}enquanto (saque <= 0 ou saque > saldo) // Repete até que o segundo valor seja maior que zero
 					saldo = saldo - saque
 	        			escreva("\nO saldo atual é de ", saldo)
 			pare
@@ -79,7 +77,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1308; 
+ * @POSICAO-CURSOR = 920; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
