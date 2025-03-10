@@ -8,17 +8,22 @@ programa
 	funcao inicio() {
 
 		inteiro opcao 
+		inteiro numero
+		real deposito
+		real saque
+		caracter continuar
+				
 		escreva("Qual é o seu nome? ")
 		leia(nome)
 		escreva("\nOlá ", nome," é um prazer ter você por aqui ")
-	
+	faca{
 		escreva("\nEscolha uma opção:\n")
 		escreva("1. Ver saldo\n")
 		escreva("2. Fazer depósito\n")
 		escreva("3. Fazer saque\n")
 		escreva("4. Sair\n")
 		
-		inteiro numero
+		
 		leia(numero)
 		escolha(numero){
 			caso 1:
@@ -26,8 +31,6 @@ programa
 			pare
 			
 			caso 2:
-				real deposito
-		
 				faca {
 					escreva("\nQual o valor para depósito? ")
 					leia(deposito)
@@ -42,9 +45,7 @@ programa
 				escreva("\nO saldo atual é de ", saldo)
 			pare
 			
-			caso 3:
-				real saque
-				
+			caso 3:	
 				faca {
 				escreva("Qual o valor para saque? ")
 				leia(saque)
@@ -58,15 +59,19 @@ programa
 			pare
 
 			caso 4:
-				escreva("Programa encerrado")
+				//"Programa encerrado"
 			pare
 
 			caso contrario:
-			 	escreva("Opção Inválida, tente novamente.")
+			 	escreva("Opção Inválida! tente novamente.")
 		}
-
-	}			//escreva("Opção Inválida")
-		
+		// pergunta se o usuário deseja continuar
+		escreva("\n\nDeseja realizar outra operação? (S/N): ")
+		leia(continuar)
+	} enquanto(continuar == 'S' ou continuar =='s') //repete enquanto o usuário quiser
+	escreva("\nPrograma encerrado. Obrigado!")
+	}
+	
 }
 
 /* $$$ Portugol Studio $$$ 
@@ -74,7 +79,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 82; 
+ * @POSICAO-CURSOR = 1308; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
