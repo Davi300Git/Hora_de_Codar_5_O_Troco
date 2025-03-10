@@ -2,12 +2,16 @@ programa
 {
 	
    	real saldo = 150.00// Float
+   	cadeia nome
 
 	funcao inicio() {
 
 		inteiro opcao 
+		escreva("Qual é o seu nome? ")
+		leia(nome)
+		escreva("\nOlá ", nome," é um prazer ter você por aqui ")
 	
-		escreva("Escolha uma opção:\n")
+		escreva("\nEscolha uma opção:\n")
 		escreva("1. Ver saldo\n")
 		escreva("2. Fazer depósito\n")
 		escreva("3. Fazer saque\n")
@@ -61,7 +65,7 @@ programa
 		se (saque <= 0){
 	        escreva("Por favor, informe um número válido.\n")
 	        fazerSaque()
-		} senao {
+		} senao {
 			saldo = saldo - saque
 			verSaldo()
 		}
@@ -82,7 +86,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 47; 
+ * @POSICAO-CURSOR = 303; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
